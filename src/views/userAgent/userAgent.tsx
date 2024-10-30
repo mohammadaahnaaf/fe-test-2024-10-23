@@ -1,10 +1,8 @@
-"use client";
-
 import { BackToHome } from "@/components/backToHome/backToHome";
-import { useUserAgentContext } from "@/components/providers/userAgentProvider";
+import { headers } from "next/headers";
 
 export const UserAgent = () => {
-  const { userAgent } = useUserAgentContext();
+  const userAgent = headers().get("user-agent");
 
   return (
     <div>
@@ -13,7 +11,6 @@ export const UserAgent = () => {
       {userAgent && (
         <div className="flex font-mono font-semibold text-sm">
           <div className="border p-2">UserAgent</div>
-
           <div className="border p-2">{userAgent}</div>
         </div>
       )}
