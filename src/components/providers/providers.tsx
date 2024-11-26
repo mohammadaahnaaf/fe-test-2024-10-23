@@ -3,9 +3,9 @@ import { UserAgentProvider } from "./userAgentProvider";
 
 export const Providers: React.FC<{
   children: React.ReactNode;
-  userAgent?: string;
-}> = ({ children, userAgent }) => {
+  initialUserAgent?: string
+}> = ({ children, initialUserAgent }) => {
   return (
-    <UserAgentProvider userAgent={userAgent}>{children}</UserAgentProvider>
+    <UserAgentProvider initialUserAgent={initialUserAgent}>{children}</UserAgentProvider>
   );
 };

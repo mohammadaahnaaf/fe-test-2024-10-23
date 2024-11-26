@@ -21,7 +21,7 @@ type UserAgentContextType = {
 
 type UserAgentProviderProps = {
   children: ReactNode;
-  initialUserAgent?: UserAgent;
+  initialUserAgent?: string;
 };
 
 const UserAgentContext = createContext<UserAgentContextType | undefined>(
